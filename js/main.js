@@ -21,8 +21,8 @@ function animation2 (variacion, opacidad, blur, extension) {
   bolaBase.boxShadow = `inset 0 0 ${10 + blur}px ${0 + extension}px rgb(0,255,255)`;
 }
 function animation3 (variacion, opacidad, blur, extension) {
-  bolaBase.width = (107 + variacion) + 'px';
-  bolaBase.height = (107 + variacion) + 'px';
+  bolaBase.width = (155 + variacion) + 'px';
+  bolaBase.height = (155 + variacion) + 'px';
   bolaBase.opacity = 1 + opacidad;
   bolaBase.boxShadow = `inset 0 0 ${10 + blur}px ${0 + extension}px 0 rebeccapurple, 0 0 50px 50px rgba(102, 51, 153, 0.347)`;
   bolaBase.boxShadow = `0 0 50px 50px rgba(102, 51, 153, 0.347), inset 0 0 ${4 + blur}px ${7 + extension}px rebeccapurple`;
@@ -42,17 +42,17 @@ setInterval(() => {
     sombraBlur = 0;
     sombraExtension = 0;
     animation2(variacion, opacidad, sombraBlur, sombraExtension)
-    variacion += 100/(fotogramas * 0.05);
-    opacidad += 1 / (fotogramas * 0.05);
-    sombraBlur += 90 /(fotogramas * 0.05);
-    sombraExtension += 10 /(fotogramas * 0.05);
+    variacion += 100/(fotogramas * 0.02);
+    opacidad += 1 / (fotogramas * 0.02);
+    sombraBlur += 90 /(fotogramas * 0.02);
+    sombraExtension += 10 /(fotogramas * 0.02);
   } else if (tiempo <= 1000) {
     console.log('Si es menor');
     animation3(variacion, opacidad, sombraBlur, sombraExtension)
-    variacion += 390/(fotogramas * 0.05);
-    opacidad += 1 / (fotogramas * 0.05);
-    sombraBlur += 100 /(fotogramas * 0.05);
-    sombraExtension += 60 /(fotogramas * 0.05);
+    variacion += 390/(fotogramas * 0.08);
+    opacidad += 1 / (fotogramas * 0.08);
+    sombraBlur += 100 /(fotogramas * 0.08);
+    sombraExtension += 60 /(fotogramas * 0.08);
   } else {
     clearInterval();
   }
